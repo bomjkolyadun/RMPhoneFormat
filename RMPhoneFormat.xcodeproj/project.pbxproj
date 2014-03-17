@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2C1E4118D7366F00DD5645 /* RMPhoneFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C1E4018D7366F00DD5645 /* RMPhoneFormat.m */; };
 		1D6A9837163D96A90005E74D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6A9836163D96A90005E74D /* UIKit.framework */; };
 		1D6A9839163D96A90005E74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6A9838163D96A90005E74D /* Foundation.framework */; };
 		1D6A983B163D96A90005E74D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6A983A163D96A90005E74D /* CoreGraphics.framework */; };
@@ -18,10 +19,11 @@
 		1D6A984D163D96A90005E74D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A984C163D96A90005E74D /* Default-568h@2x.png */; };
 		1D6A9850163D96A90005E74D /* RMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A984F163D96A90005E74D /* RMViewController.m */; };
 		1D6A985C163D977F0005E74D /* PhoneFormats.dat in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A9859163D977F0005E74D /* PhoneFormats.dat */; };
-		1D6A985D163D977F0005E74D /* RMPhoneFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A985B163D977F0005E74D /* RMPhoneFormat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A2C1E3F18D7366F00DD5645 /* RMPhoneFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMPhoneFormat.h; sourceTree = "<group>"; };
+		0A2C1E4018D7366F00DD5645 /* RMPhoneFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPhoneFormat.m; sourceTree = "<group>"; };
 		1D6A9832163D96A90005E74D /* RMPhoneFormat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMPhoneFormat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6A9836163D96A90005E74D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1D6A9838163D96A90005E74D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,8 +40,6 @@
 		1D6A984E163D96A90005E74D /* RMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMViewController.h; sourceTree = "<group>"; };
 		1D6A984F163D96A90005E74D /* RMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMViewController.m; sourceTree = "<group>"; };
 		1D6A9859163D977F0005E74D /* PhoneFormats.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = PhoneFormats.dat; sourceTree = "<group>"; };
-		1D6A985A163D977F0005E74D /* RMPhoneFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMPhoneFormat.h; sourceTree = "<group>"; };
-		1D6A985B163D977F0005E74D /* RMPhoneFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPhoneFormat.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2C1E3E18D7366F00DD5645 /* RMPhoneFormat */ = {
+			isa = PBXGroup;
+			children = (
+				0A2C1E3F18D7366F00DD5645 /* RMPhoneFormat.h */,
+				0A2C1E4018D7366F00DD5645 /* RMPhoneFormat.m */,
+			);
+			path = RMPhoneFormat;
+			sourceTree = "<group>";
+		};
 		1D6A9827163D96A90005E74D = {
 			isa = PBXGroup;
 			children = (
@@ -86,12 +95,11 @@
 		1D6A983C163D96A90005E74D /* RMPhoneFormat */ = {
 			isa = PBXGroup;
 			children = (
+				0A2C1E3E18D7366F00DD5645 /* RMPhoneFormat */,
 				1D6A9845163D96A90005E74D /* RMAppDelegate.h */,
 				1D6A9846163D96A90005E74D /* RMAppDelegate.m */,
 				1D6A984E163D96A90005E74D /* RMViewController.h */,
 				1D6A984F163D96A90005E74D /* RMViewController.m */,
-				1D6A985A163D977F0005E74D /* RMPhoneFormat.h */,
-				1D6A985B163D977F0005E74D /* RMPhoneFormat.m */,
 				1D6A9859163D977F0005E74D /* PhoneFormats.dat */,
 				1D6A983D163D96A90005E74D /* Supporting Files */,
 			);
@@ -179,10 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2C1E4118D7366F00DD5645 /* RMPhoneFormat.m in Sources */,
 				1D6A9843163D96A90005E74D /* main.m in Sources */,
 				1D6A9847163D96A90005E74D /* RMAppDelegate.m in Sources */,
 				1D6A9850163D96A90005E74D /* RMViewController.m in Sources */,
-				1D6A985D163D977F0005E74D /* RMPhoneFormat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
