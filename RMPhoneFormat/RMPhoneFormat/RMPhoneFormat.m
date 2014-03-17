@@ -618,7 +618,7 @@ static NSMutableDictionary *flagRules = nil;
 
 + (NSString *)strip:(NSString *)str {
     NSMutableString *res = [NSMutableString stringWithString:str];
-    for (int i = [res length] - 1; i >= 0; i--) {
+    for (NSInteger i = [res length] - 1; i >= 0; i--) {
         if (![phoneChars characterIsMember:[res characterAtIndex:i]]) {
             [res deleteCharactersInRange:NSMakeRange(i, 1)];
         }
@@ -697,6 +697,11 @@ static NSMutableDictionary *flagRules = nil;
 }
 
 - (NSString *)format:(NSString *)orig {
+
+    if (orig.length == 0)
+    {
+        return orig;
+    }
     // First remove all added punctuation to get just raw phone number characters.
     NSString *str = [RMPhoneFormat strip:orig];
 
@@ -764,6 +769,10 @@ static NSMutableDictionary *flagRules = nil;
 }
 
 - (BOOL)isPhoneNumberValid:(NSString *)phoneNumber {
+    if (phoneNumber.length == 0)
+    {
+        return NO;
+    }
     // First remove all added punctuation to get just raw phone number characters.
     NSString *str = [RMPhoneFormat strip:phoneNumber];
     
@@ -839,7 +848,7 @@ static NSMutableDictionary *flagRules = nil;
     }
 }
 
-- (int)value16:(NSUInteger)offset {
+- (uint16_t)value16:(NSUInteger)offset {
     if (offset + 2 <= [_data length]) {
         return OSReadLittleInt16([_data bytes], offset);
     } else {
@@ -861,8 +870,8 @@ static NSMutableDictionary *flagRules = nil;
         NSNumber *num = [_callingCodeOffsets objectForKey:callingCode];
         if (num) {
             const uint8_t *bytes = [_data bytes];
-            uint32_t start = [num longValue];
-            uint32_t offset = start;
+            NSUInteger start = [num longValue];
+            NSUInteger offset = start;
             res = [[CallingCodeInfo alloc] init];
             res.callingCode = callingCode;
             res.countries = [_callingCodeCountries objectForKey:callingCode];

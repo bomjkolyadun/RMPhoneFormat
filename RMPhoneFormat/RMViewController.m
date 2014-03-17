@@ -109,7 +109,7 @@
         }
         
         // Now let's find the position, in the newly formatted string, of the same number of non-formatting characters.
-        int pos = [phone length];
+        NSInteger pos = [phone length];
         int cnt2 = 0;
         for (NSUInteger i = 0; i < [phone length]; i++) {
             if ([_phoneChars characterIsMember:[phone characterAtIndex:i]]) {
